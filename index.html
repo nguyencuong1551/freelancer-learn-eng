@@ -575,7 +575,7 @@
         }
 
 
-        /* CSS cho nút CTA */
+        /* Base styles */
         .cta-btn {
             display: inline-flex;
             align-items: center;
@@ -591,32 +591,29 @@
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 1px;
-            animation: shake 5s ease-in-out infinite; /* Rung mỗi 5 giây */
+            animation: shake 5s ease-in-out infinite;
         }
 
-        /* Hiệu ứng rung */
+        /* Shake animation */
         @keyframes shake {
             0%, 100% {
-                transform: translateX(0); /* Đứng yên ban đầu */
+                transform: translateX(0);
             }
 
             25% {
-                transform: translateX(-4px); /* Rung sang trái một chút */
+                transform: translateX(-4px);
             }
 
             50% {
-                transform: translateX(4px); /* Rung sang phải một chút */
+                transform: translateX(4px);
             }
 
             75% {
-                transform: translateX(-4px); /* Rung sang trái */
-            }
-
-            100% {
-                transform: translateX(0); /* Trở về vị trí ban đầu */
+                transform: translateX(-4px);
             }
         }
 
+        /* Hover effects */
         .cta-btn:hover {
             background-color: #f59e0b;
             transform: scale(1.05);
@@ -637,7 +634,7 @@
             box-shadow: 0 0 5px rgba(251, 191, 36, 0.6);
         }
 
-        /* Hiệu ứng cho phần CTA xuất hiện */
+        /* CTA container animation */
         .cta-animate {
             opacity: 0;
             transform: translateY(50px);
@@ -649,6 +646,48 @@
                 transform: translateY(0);
             }
 
+        /* ===== Responsive Styling ===== */
+
+        /* Tablet - max 768px */
+        @media (max-width: 768px) {
+            .cta-btn {
+                padding: 12px 24px;
+                font-size: 11px;
+            }
+
+            #cta h3 {
+                font-size: 1.25rem; /* Smaller heading */
+            }
+
+            #cta p {
+                font-size: 1rem;
+            }
+
+            .cta-animate {
+                padding: 3rem 2rem;
+            }
+        }
+
+        /* Mobile - max 480px */
+        @media (max-width: 480px) {
+            .cta-btn {
+                padding: 10px 20px;
+                font-size: 10px;
+                letter-spacing: 0.5px;
+            }
+
+            #cta h3 {
+                font-size: 1rem;
+            }
+
+            #cta p {
+                font-size: 0.75rem
+            }
+
+            .cta-animate {
+                padding: 2rem 1.5rem;
+            }
+        }
 
 
     </style>
