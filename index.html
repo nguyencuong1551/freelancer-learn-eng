@@ -53,7 +53,7 @@
         main {
             flex: 1 0 auto;
             padding: 20px;
-            margin-top: 60px;  /*Giữ khoảng cách giữa header và nội dung */
+            /*margin-top: 60px;*/ /* Giữ khoảng cách giữa header và nội dung */
             margin-bottom: 80px; /* Giữ khoảng cách giữa nội dung và footer */
             overflow-y: auto; /* Cho phép cuộn dọc */
             max-height: calc(100vh - 140px); /* Tính toán chiều cao còn lại sau khi trừ header + footer */
@@ -82,7 +82,8 @@
         /* CSS Hero */
         #hero {
             position: relative;
-            overflow: hidden; /* Ẩn thanh cuộn khi phần tử di chuyển ra ngoài */            
+            overflow: hidden; /* Ẩn thanh cuộn khi phần tử di chuyển ra ngoài */
+            margin-top: 3vh;
         }
 
             #hero h1 {
@@ -671,7 +672,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="h-100 d-flex align-items-center" style="background-color: #0d0d14; padding: 60px 0;">
+        <section id="hero" class="d-flex align-items-center" style="background-color: #0d0d14; padding: 60px 0;">
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-white">
