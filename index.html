@@ -90,8 +90,22 @@
                 font-size: 2.8rem;
                 font-weight: 800;
                 line-height: 1.2;
-                animation: slideInLeft 1.5s ease-out forwards; /* Thêm animation cho chữ */
+                animation: slideInLeft 1.5s ease-out forwards;
+                text-align: left; /* Mặc định là căn trái */
             }
+
+        /* Responsive cho màn hình nhỏ */
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 1.8rem; /* Giảm kích thước chữ */                
+            }
+        }
+
+        @media (max-width: 480px) {
+            #hero h1 {
+                font-size: 1.5rem; /* Nhỏ hơn nữa cho điện thoại */
+            }
+        }
 
             #hero p {
                 color: #9ca3af; /* text-muted gray-400 */
@@ -357,6 +371,17 @@
             font-weight: 700; /* Tăng độ dày chữ */
         }
 
+        #features .bg-amber-soft {
+            background-color: rgba(245, 158, 11, 0.2);
+            width: 3rem; /* Chiều rộng */
+            height: 3rem; /* Chiều cao */
+            border-radius: 0.75rem; /* Bo góc nhẹ, bạn có thể thay bằng 9999px nếu muốn bo tròn hoàn toàn */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
         @keyframes slideInLeft {
             0% {
                 opacity: 0;
@@ -498,12 +523,18 @@
             }
 
             #top-students .card img.avt-rank {
+                width: 80px; /* hoặc 64px, tuỳ bạn */
+                height: 80px; /* bằng với width */
+                border-radius: 50%; /* làm tròn xoe */
+                object-fit: cover; /* cắt ảnh cho khớp khung */
                 transition: transform 0.3s ease;
             }
 
+
             #top-students .card:hover img.avt-rank {
-                transform: scale(1.05);
+                transform: scale(1.05); /* Hiệu ứng phóng nhẹ khi hover */
             }
+
 
 
         @media (max-width: 576px) {
@@ -672,7 +703,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="d-flex align-items-center" style="background-color: #0d0d14; padding: 60px 0;">
+        <section id="hero" class="d-flex align-items-center" style="background-color: #0d0d14; padding: 20px 0;">
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-white">
@@ -709,7 +740,7 @@
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col" data-aos="fade-right" data-aos-delay="0">
                         <div class="card h-100 bg-gray-900 text-light hover:scale-105 transition-transform rounded-3 p-4">
-                            <div class="bg-amber-500/20 bg-opacity-20 w-12 h-12 rounded-3 d-flex align-items-center justify-content-center mb-3">
+                            <div class="bg-amber-soft bg-amber-500/20 bg-opacity-20 w-12 h-12 rounded-3 d-flex align-items-center justify-content-center mb-3">
                                 <svg class="svg-inline--fa fa-brain text-warning" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="brain" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"></path></svg>
                             </div>
                             <h3 class="text-xl font-weight-700 mb-2">Smart Learning</h3>
@@ -718,7 +749,7 @@
                     </div>
                     <div class="col" data-aos="fade-right" data-aos-delay="100">
                         <div class="card h-100 bg-gray-900 text-light hover:scale-105 transition-transform rounded-3 p-4">
-                            <div class="bg-amber-500/20 bg-opacity-20 w-12 h-12 rounded-3 d-flex align-items-center justify-content-center mb-3">
+                            <div class="bg-amber-soft bg-amber-500/20 bg-opacity-20 w-12 h-12 rounded-3 d-flex align-items-center justify-content-center mb-3">
                                 <svg class="svg-inline--fa fa-gamepad text-warning" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gamepad" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z"></path></svg>
                             </div>
                             <h3 class="text-xl font-weight-700 mb-2">Gamified Experience</h3>
@@ -727,8 +758,8 @@
                     </div>
                     <div class="col" data-aos="fade-right" data-aos-delay="200">
                         <div class="card h-100 bg-gray-900 text-light hover:scale-105 transition-transform rounded-3 p-4">
-                            <div class="bg-amber-500/20 bg-opacity-20 w-12 h-12 rounded-3 d-flex align-items-center justify-content-center mb-3">
-                                <svg class="svg-inline--fa fa-comments text-warning" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176s93.1 176 208 176zm-56-104c0-14.5 11.8-26.3 26.3-26.3s26.3 11.8 26.3 26.3v48.3c0 14.5-11.8 26.3-26.3 26.3s-26.3-11.8-26.3-26.3V248zM368 384c0 14.5-11.8 26.3-26.3 26.3s-26.3-11.8-26.3-26.3v-48.3c0-14.5 11.8-26.3 26.3-26.3s26.3 11.8 26.3 26.3V384z"></path></svg>
+                            <div class="bg-amber-soft bg-amber-500/20 bg-opacity-20 w-12 h-12 rounded-3 d-flex align-items-center justify-content-center mb-3">
+                                <svg class="svg-inline--fa fa-comments text-warning" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2 0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.3-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9l0 0 0 0-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z"></path></svg><!-- <i class="fa-solid fa-comments text-warning"></i> Font Awesome fontawesome.com -->
                             </div>
                             <h3 class="text-xl font-weight-700 mb-2">Interactive Chat</h3>
                             <p class="text-gray-400">Engage in conversations with real-time corrections and suggestions to improve your skills.</p>
@@ -751,7 +782,7 @@
                         <div class="card h-100 bg-gray-900 text-light rounded-3 p-4">
                             <a class="text-decoration-none text-light" href="/profile/1">
                                 <div class="d-flex align-items-center mb-3">
-                                    <img class="w-25 avt-rank" alt="Top user" src="https://res.cloudinary.com/datpmt-english/image/upload/v1678249312/zcwbrzgbypupifcnkipb.jpg">
+                                    <img class="w-25 avt-rank" alt="Top user" src="https://img.pikbest.com/origin/10/02/12/51npIkbEsTBs9.png!w700wp">
                                     <div class="ms-3">
                                         <h3 class="font-weight-700">Trần Đăng Đức Đạt</h3>
                                         <p class="text-warning">118,370 points</p>
@@ -768,7 +799,7 @@
                         <div class="card h-100 bg-gray-900 text-light rounded-3 p-4">
                             <a class="text-decoration-none text-light" href="/profile/160">
                                 <div class="d-flex align-items-center mb-3">
-                                    <img class="w-25 avt-rank" alt="Top user" src="https://res.cloudinary.com/datpmt-english/image/upload/v1746625082/sdjl1ycbuvj8fgiuhjmx.jpg">
+                                    <img class="w-25 avt-rank" alt="Top user" src="https://i.pinimg.com/736x/b7/2d/6d/b72d6dc45d7174d01085d9e71b5dcd59.jpg">
                                     <div class="ms-3">
                                         <h3 class="font-weight-700">lu king of english</h3>
                                         <p class="text-warning">115,280 points</p>
@@ -785,7 +816,7 @@
                         <div class="card h-100 bg-gray-900 text-light rounded-3 p-4">
                             <a class="text-decoration-none text-light" href="/profile/279">
                                 <div class="d-flex align-items-center mb-3">
-                                    <img class="w-25 avt-rank" alt="Top user" src="https://lh3.googleusercontent.com/a/ACg8ocJ1ydQlhU7rNBZvKOQQxT2wmJolfu1_bwhEvegvFEStbxWwMcBq=s96-c">
+                                    <img class="w-25 avt-rank" alt="Top user" src="https://cdn11.dienmaycholon.vn/filewebdmclnew/public/userupload/files/Image%20FP_2024/hinh-anime-2.jpg">
                                     <div class="ms-3">
                                         <h3 class="font-weight-700">Như</h3>
                                         <p class="text-warning">4,820 points</p>
