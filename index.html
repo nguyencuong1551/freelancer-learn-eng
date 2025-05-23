@@ -94,18 +94,7 @@
                 text-align: left; /* Mặc định là căn trái */
             }
 
-        /* Responsive cho màn hình nhỏ */
-        @media (max-width: 768px) {
-            #hero h1 {
-                font-size: 1.8rem; /* Giảm kích thước chữ */                
-            }
-        }
-
-        @media (max-width: 480px) {
-            #hero h1 {
-                font-size: 1.5rem; /* Nhỏ hơn nữa cho điện thoại */
-            }
-        }
+      
 
             #hero p {
                 color: #9ca3af; /* text-muted gray-400 */
@@ -133,33 +122,7 @@
 
                 #hero .btn-warning:hover {
                     background-color: #e0ac00;
-                }
-
-        /* Animation cho chữ */
-        @keyframes slideInLeft {
-            0% {
-                opacity: 0;
-                transform: translateX(-100%); /* Di chuyển từ trái sang */
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateX(0); /* Kết thúc ở vị trí ban đầu */
-            }
-        }
-
-        /* Animation cho ảnh */
-        @keyframes slideInRight {
-            0% {
-                opacity: 0;
-                transform: translateX(100%); /* Di chuyển từ phải sang */
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateX(0); /* Kết thúc ở vị trí ban đầu */
-            }
-        }
+                }       
 
         /* Áp dụng animation vào h1, p, và img */
         #hero h1, #hero p {
@@ -220,34 +183,6 @@
         .navbar-nav .nav-item.active .nav-link {
             color: #ffffff; /* Màu chữ trắng cho mục đang được chọn */
             background-color: #e0ac00; /* Nền vàng đậm */
-        }
-
-        /* Navbar responsive */
-        @media (max-width: 767px) {
-            .navbar-collapse {
-                text-align: left; /* Căn trái cho menu khi thu nhỏ */
-                padding: 10px 0;
-                width: 100%;
-            }
-
-            .navbar-nav {
-                flex-direction: column; /* Căn menu dọc */
-            }
-
-                .navbar-nav .nav-item {
-                    margin: 10px 0; /* Thêm khoảng cách giữa các mục */
-                }
-
-                .navbar-nav .nav-link {
-                    font-size: 1.2rem; /* Tăng kích thước font cho dễ đọc trên điện thoại */
-                    color: #0d0d14; /* Chữ màu đen */
-                }
-
-                    .navbar-nav .nav-link:hover,
-                    .navbar-nav .nav-link:focus {
-                        background-color: #e0ac00; /* Nền vàng đậm khi hover */
-                        color: white; /* Màu chữ trắng khi hover */
-                    }
         }
 
 
@@ -320,56 +255,26 @@
             /* Chữ "English" */
             .logo-text span {
                 color: #ffffff; /* Màu trắng cho chữ "English" */
-            }
-
-        /* Hiệu ứng phát sáng */
-        @keyframes glowEffect {
-            0% {
-                text-shadow: 0 0 5px #ffbf00, 0 0 10px #ffbf00, 0 0 15px #ffbf00, 0 0 20px #ffbf00;
-                color: #0d0d14; /* Chữ "Datpmt" sẽ là màu tối khi bắt đầu */
-            }
-
-            100% {
-                text-shadow: 0 0 10px #ffbf00, 0 0 20px #ffbf00, 0 0 30px #ffbf00, 0 0 40px #ffbf00;
-                color: #ffc107; /* Chữ "Datpmt" sáng lên màu vàng khi kết thúc */
-            }
-        }
+            }       
 
         /* Logo Container hover effect */
         .logo-container:hover .logo-text {
             color: #ffc107; /* Chữ "Datpmt" sẽ chuyển sang màu vàng khi hover */
             text-shadow: 0 0 10px #ffc107, 0 0 20px #ffc107, 0 0 30px #ffc107; /* Hiệu ứng phát sáng cho chữ */
         }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .logo-container {
-                font-size: 1.2rem;
-            }
-
-            .logo-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 18px; /* Giảm kích thước icon khi ở màn hình nhỏ */
-            }
-
-            .logo-text {
-                font-size: 1.5rem;
-                padding: 4px 8px; /* Điều chỉnh lại padding để logo không quá to */
-            }
-        }
+      
         /* Logo Container */
 
+
         /* General Styles for the Features Section */
-        #features h2 span {
-            color: #ffb800; /* Highlighted color */
+        #features h2 {
+            font-size: 2.8rem;
             font-weight: 700; /* Tăng độ dày chữ */
         }
 
-        /* General Styles for the Features Section */
-        #features h2 strong {
-            font-weight: 700; /* Tăng độ dày chữ */
-        }
+        #features h2 span {
+            color: #ffb800; /* Highlighted color */
+        }        
 
         #features .bg-amber-soft {
             background-color: rgba(245, 158, 11, 0.2);
@@ -379,20 +284,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-
-        @keyframes slideInLeft {
-            0% {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+        }       
 
         .animate-left {
             animation: slideInLeft 0.8s ease forwards;
@@ -448,25 +340,7 @@
             .card p {
                 font-size: 1rem;
                 color: #d1d1d1; /* Slightly gray text for description */
-            }
-
-        /* Responsive Design for Cards */
-        @media (max-width: 768px) {
-            #features h2 {
-                font-weight: bold; /* In đậm toàn bộ tiêu đề */
-            }
-
-            .card {
-                margin-bottom: 2rem; /* Space between stacked cards */
-            }
-        }
-
-        /* Medium Screens - Column Layout */
-        @media (max-width: 992px) {
-            #features .row-cols-md-3 {
-                grid-template-columns: 1fr 1fr; /* Two cards in each row for medium-sized screens */
-            }
-        }
+            }      
 
         .container {
             width: 100%;
@@ -482,6 +356,14 @@
             #top-students h2 {
                 font-weight: 700;
                 color: #fff;
+                margin: 0;
+                line-height: 1.5;
+            }
+
+            #top-students a {
+                font-weight: 500;
+                font-size: 1rem;
+                white-space: nowrap;
             }
 
             #top-students .card {
@@ -534,41 +416,8 @@
             #top-students .card:hover img.avt-rank {
                 transform: scale(1.05); /* Hiệu ứng phóng nhẹ khi hover */
             }
-
-
-
-        @media (max-width: 576px) {
-            #top-students .card {
-                padding: 1.5rem;
-            }
-
-            #top-students h2 {
-                font-size: 1.5rem;
-            }
-
-            #top-students .badge {
-                font-size: 0.7rem;
-                padding: 0.3rem 0.5rem;
-            }
-        }
-
-        @media (min-width: 1200px) {
-            #top-students .card {
-                padding: 2.5rem;
-            }
-        }
-
-        @keyframes slideInRight {
-            0% {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+      
+      
 
         .animate-from-right {
             animation: slideInRight 0.8s ease forwards;
@@ -592,26 +441,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             animation: shake 5s ease-in-out infinite;
-        }
-
-        /* Shake animation */
-        @keyframes shake {
-            0%, 100% {
-                transform: translateX(0);
-            }
-
-            25% {
-                transform: translateX(-4px);
-            }
-
-            50% {
-                transform: translateX(4px);
-            }
-
-            75% {
-                transform: translateX(-4px);
-            }
-        }
+        }      
 
         /* Hover effects */
         .cta-btn:hover {
@@ -648,15 +478,64 @@
 
         /* ===== Responsive Styling ===== */
 
-        /* Tablet - max 768px */
+        /* Responsive cho màn hình nhỏ (max-width: 768px) */
         @media (max-width: 768px) {
+            /* Thay đổi kích thước chữ cho tiêu đề */
+            #hero h1 {
+                font-size: 1.8rem;
+            }
+
+            #features h2 {
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+
+            /* Cách bố trí thẻ card */
+            .card {
+                margin-bottom: 2rem;
+            }
+
+            /* Navbar responsive */
+            .navbar-collapse {
+                text-align: left;
+                padding: 10px 0;
+                width: 100%;
+            }
+
+            .navbar-nav {
+                flex-direction: column; /* Chuyển menu từ ngang sang dọc */
+            }
+
+                .navbar-nav .nav-link {
+                    font-size: 1.2rem;
+                    color: #0d0d14;
+                }
+
+                    .navbar-nav .nav-link:hover,
+                    .navbar-nav .nav-link:focus {
+                        background-color: #e0ac00;
+                        color: white;
+                    }
+
+            /* Thay đổi kích thước tiêu đề trong phần top-students */
+            #top-students h2 {
+                font-size: 1.5rem;
+            }
+
+            /* Điều chỉnh kích thước badge trong top-students */
+            #top-students .badge {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.5rem;
+            }
+
+            /* CTA button */
             .cta-btn {
                 padding: 12px 24px;
                 font-size: 11px;
             }
 
             #cta h3 {
-                font-size: 1.15rem; /* Smaller heading */
+                font-size: 1.15rem;
             }
 
             #cta p {
@@ -668,8 +547,38 @@
             }
         }
 
-        /* Mobile - max 480px */
+        /* Responsive cho màn hình rất nhỏ (max-width: 480px) */
         @media (max-width: 480px) {
+            /* Thay đổi kích thước chữ cho tiêu đề */
+            #hero h1 {
+                font-size: 1.5rem;
+            }
+
+            #features h2 {
+                font-size: 1.2rem;
+            }
+
+            #top-students h2 {
+                font-size: 1.2rem;
+            }
+
+            /* Điều chỉnh logo */
+            .logo-container {
+                font-size: 1.2rem;
+            }
+
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .logo-text {
+                font-size: 1.5rem;
+                padding: 4px 8px;
+            }
+
+            /* CTA button cho màn hình rất nhỏ */
             .cta-btn {
                 padding: 10px 20px;
                 font-size: 10px;
@@ -681,11 +590,81 @@
             }
 
             #cta p {
-                font-size: 0.75rem
+                font-size: 0.75rem;
             }
 
             .cta-animate {
                 padding: 2rem 1.5rem;
+            }
+
+            /* Thay đổi padding trong card của top-students */
+            #top-students .card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Responsive cho màn hình trung bình (max-width: 992px) */
+        @media (max-width: 992px) {
+            /* Thay đổi cách bố trí các card trong row */
+            #features .row-cols-md-3 {
+                grid-template-columns: 1fr 1fr; /* Hai cột cho màn hình trung bình */
+            }
+        }
+
+        /* ===== Animation Styling ===== */
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px); /* Di chuyển 50px sang trái */
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0); /* Di chuyển về vị trí ban đầu */
+            }
+        }
+
+        @keyframes slideInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(50px); /* Di chuyển 50px sang phải */
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0); /* Di chuyển về vị trí ban đầu */
+            }
+        }
+
+
+        @keyframes glowEffect {
+            0% {
+                text-shadow: 0 0 5px #ffbf00, 0 0 10px #ffbf00, 0 0 15px #ffbf00, 0 0 20px #ffbf00;
+                color: #0d0d14; /* Màu chữ ban đầu */
+            }
+
+            100% {
+                text-shadow: 0 0 10px #ffbf00, 0 0 20px #ffbf00, 0 0 30px #ffbf00, 0 0 40px #ffbf00;
+                color: #ffc107; /* Màu chữ sáng lên */
+            }
+        }
+
+
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0); /* Vị trí ban đầu */
+            }
+
+            25% {
+                transform: translateX(-4px); /* Rung trái */
+            }
+
+            50% {
+                transform: translateX(4px); /* Rung phải */
+            }
+
+            75% {
+                transform: translateX(-4px); /* Rung trái lần nữa */
             }
         }
 
@@ -771,9 +750,9 @@
         </section>
 
         <!-- Features Section -->
-        <section id="features" class="py-5">
+        <section id="features" class="py-4">
             <div class="container">
-                <h2 class="display-5 text-center mb-5">
+                <h2 class="display-5 text-center mb-4">
                     <strong>Why Choose</strong> <span class="text-amber-500">DatpmtEnglish</span>
                 </h2>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -808,12 +787,12 @@
             </div>
         </section>
 
-        <section id="top-students" class="py-5">
+        <section id="top-students" class="py-4">
             <div class="container">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2 class="h4 font-weight-700">Top Students</h2>
-                    <a href="/rank">
-                        <span class="text-warning cursor-pointer text-decoration-underline">View All Rankings</span>
+                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+                    <h2 class="h4 font-weight-700 m-0">Top Students</h2>
+                    <a href="/rank" class="text-warning text-decoration-underline text-nowrap">
+                        View All Rankings
                     </a>
                 </div>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -873,7 +852,7 @@
         </section>
 
         <!-- 🔽 Chèn CTA ở đây -->
-        <section id="cta" class="py-5">
+        <section id="cta" class="py-4">
             <div class="container">
                 <div class="bg-warning rounded-3 p-5 text-center cta-animate">
                     <h3 class="h4 display-7 fw-bold text-black mb-3">Ready to Start Your Journey?</h3>
